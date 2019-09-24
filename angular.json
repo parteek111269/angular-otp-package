@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "angular-otp-box": {
+      "projectType": "library",
+      "root": "projects/angular-otp-box",
+      "sourceRoot": "projects/angular-otp-box/src",
+      "prefix": "tm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-otp-box/tsconfig.lib.json",
+            "project": "projects/angular-otp-box/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-otp-box/src/test.ts",
+            "tsConfig": "projects/angular-otp-box/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-otp-box/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-otp-box/tsconfig.lib.json",
+              "projects/angular-otp-box/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "angular-otp-package"
 }

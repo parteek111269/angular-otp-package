@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-otp-package';
+  public settings = {
+    length: 6,
+    numbersOnly: true
+  }
+  constructor(){}
+  public onInputChange(e) {
+    console.log(e);
+  }
 }
