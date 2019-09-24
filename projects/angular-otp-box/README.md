@@ -2,6 +2,9 @@
 
 Angular otp input field component for web applications. Easy to integrate and use.
 
+## Demo
+<a href="https://stackblitz.com/github/parteek111269/angular-otp-package" rel="nofollow" target="_blank">Live Demo</a>
+
 ## Installation
 
 ```bash
