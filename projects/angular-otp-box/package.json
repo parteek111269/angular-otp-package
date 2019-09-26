@@ -1,6 +1,6 @@
 {
   "name": "angular-otp-box",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "author": {"name": "Parteek Sharma"},
   "description": "Angular otp input field component for web applications. Easy to integrate and use.",
   "keywords": ["otp","npm otp input","angular otp input","ng otp input","ngx otp input","angular4 otp input","angular5 otp input","angular6 otp input","angular7 otp input","angular8 otp input","otp angular","angular otp password","otp box angular","angular otp box","angular otp verify box","angular otp verification box"],
