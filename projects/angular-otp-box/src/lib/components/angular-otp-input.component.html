@@ -12,4 +12,7 @@
         id="otp_{{i}}_{{componentKey}}" 
         (keyup)="keyUp($event, i)"
     >
+    <ng-container [counter]="setting.timer" (value)="onCounterChange($event)">
+        <div class="timer {{setting.timerClass}}"> {{setting.timerText}} {{ counter }} seconds</div>
+    </ng-container>
 </div>

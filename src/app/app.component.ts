@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public settings = {
     length: 6,
-    numbersOnly: true
+    numbersOnly: true,
+    timer: 120,
+    timerText: 'Resend OTP in'
   }
   constructor(){}
   public onInputChange(e) {

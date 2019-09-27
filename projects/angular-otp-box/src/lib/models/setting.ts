@@ -6,4 +6,7 @@ export class Setting {
     numbersOnly?: boolean;
     inputClass?: string;
     wrapperClass?: string;
+    timer?: number;
+    timerClass?: string;
+    timerText?: string;
 }

@@ -10,12 +10,15 @@ import { Setting } from '../models/setting';
 })
 
 export class OtpInputComponent implements OnInit {
-	@Input() setting: Setting = { length: 4 };
-	@Output() onValueChange = new EventEmitter<string>();
+	@Input() setting: Setting = { length: 4, timer: 0 };
+	@Output() onValueChange = new EventEmitter<any>();
+	// @Output() timerEmitter = new EventEmitter<any>();
 	otpForm: FormGroup;
 	inputControls: FormControl[] = new Array(this.setting.length);
 	componentKey = Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
-	constructor(private keysPipe: KeysPipe) { }
+	public counter: number;
+	
+	constructor(private keysPipe: KeysPipe) {}
 
 	public ngOnInit(): void {
 		this.otpForm = new FormGroup({})
@@ -23,6 +26,7 @@ export class OtpInputComponent implements OnInit {
 			this.otpForm.addControl(this.getControlName(index), new FormControl())
 		}
 	}
+	
 	public ngAfterViewInit(): void {
 		let containerItem = document.getElementById(`c_${this.componentKey}`);
 		if (containerItem) {
@@ -32,6 +36,7 @@ export class OtpInputComponent implements OnInit {
 			}
 		}
 	}
+
 	private getControlName(idx) {
 		return `ctrl_${idx}`;
 	}
@@ -117,5 +122,12 @@ export class OtpInputComponent implements OnInit {
 			}
 		});
 		this.onValueChange.emit(val);
+	}
+
+	public onCounterChange(e): void {
+		this.counter = e;
+		if(this.counter == 0) {
+			this.onValueChange.emit(-1);
+		}
 	}
 }
