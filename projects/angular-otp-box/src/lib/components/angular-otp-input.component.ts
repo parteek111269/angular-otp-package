@@ -12,8 +12,7 @@ import { Setting } from '../models/setting';
 export class OtpInputComponent implements OnInit {
 	@Input() setting: Setting = { 
 		length: 4, 
-		timer: 0,
-		timerText: 'Resend OTP in'
+		timer: 0
 	};
 	@Output() onValueChange = new EventEmitter<any>();
 	otpForm: FormGroup;

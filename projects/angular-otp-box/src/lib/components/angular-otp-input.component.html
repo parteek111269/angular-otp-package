@@ -13,6 +13,6 @@
         (keyup)="keyUp($event, i)"
     >
     <ng-container [counter]="setting.timer" (value)="onCounterChange($event)">
-        <div class="timer {{setting.timerClass}}"> {{setting.timerText}} {{ counter }} seconds</div>
+        <div class="timer {{setting.timerClass}}"> {{setting.timerText}} {{ counter }}</div>
     </ng-container>
 </div>

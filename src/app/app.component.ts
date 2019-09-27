@@ -9,8 +9,7 @@ export class AppComponent {
   public settings = {
     length: 6,
     numbersOnly: true,
-    timer: 120,
-    timerText: 'Resend OTP in'
+    timer: 120
   }
   constructor(){}
   public onInputChange(e) {

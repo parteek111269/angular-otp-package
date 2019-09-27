@@ -44,7 +44,7 @@ In `component` add following:
     <tr>
         <td>setting</td>
         <td>object</td>
-        <td>{ length:4, timer: 0, timerText: 'Resend OTP in' }</td>
+        <td>{ length:4, timer: 0 }</td>
         <th>true</th>
         <td>configurations to configure the component</td>
     </tr>
@@ -133,7 +133,7 @@ In `component` add following:
     <tr>
         <td>timerText</td>
         <td>string</td>
-        <td>Resend OTP in</td>
+        <td>--</td>
         <th>false</th>
         <td>Text to be shown with countdown.</td>
     </tr>
