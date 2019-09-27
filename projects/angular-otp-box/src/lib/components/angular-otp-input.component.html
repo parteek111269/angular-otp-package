@@ -1,4 +1,4 @@
-<div class="container {{setting.wrapperClass}}" id="c_{{componentKey}}" *ngIf="otpForm?.controls"
+<div class="otp-container {{setting.wrapperClass}}" id="c_{{componentKey}}" *ngIf="otpForm?.controls"
     [ngStyle]="setting.wrapperStyles">
     <input 
         [type]="setting.numbersOnly ? 'tel' : 'text'" 
@@ -12,7 +12,11 @@
         id="otp_{{i}}_{{componentKey}}" 
         (keyup)="keyUp($event, i)"
     >
-    <ng-container [counter]="setting.timer" (value)="onCounterChange($event)">
-        <div class="timer {{setting.timerClass}}"> {{setting.timerText}} {{ counter }}</div>
+    <ng-container counter [counter]="setting.timer" (value)="onCounterChange($event)">
+        <div>
+            <button class="btn {{setting.btnClass}}" [disabled]="counter != 0" (click)="ressendOtp()">
+                Resend OTP <span *ngIf="counter != 0">in {{ counter }} seconds.</span>
+            </button>
+        </div>
     </ng-container>
 </div>

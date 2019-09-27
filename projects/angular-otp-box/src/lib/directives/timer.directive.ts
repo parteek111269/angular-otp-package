@@ -1,4 +1,4 @@
-import { Directive, Input, Output, EventEmitter, OnChanges, OnDestroy } from '@angular/core';
+import { Directive, Input, Output, EventEmitter, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 
 import { Subject, Observable, Subscription, timer } from 'rxjs';
 import { switchMap, take, tap } from 'rxjs/operators';
@@ -25,7 +25,11 @@ export class CounterDirective implements OnChanges, OnDestroy {
         ).subscribe();
     }
 
-    ngOnChanges(): void {
+    ngOnChanges(changes: SimpleChanges): void {
+        this.startTimer();
+    }
+
+    public startTimer() {
         this._counterSource$.next({ count: this.counter, interval: this.interval });
     }
 

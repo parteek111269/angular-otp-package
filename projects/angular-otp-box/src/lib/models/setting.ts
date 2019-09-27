@@ -7,6 +7,5 @@ export class Setting {
     inputClass?: string;
     wrapperClass?: string;
     timer?: number;
-    timerClass?: string;
-    timerText?: string;
+    btnClass?: string;
 }

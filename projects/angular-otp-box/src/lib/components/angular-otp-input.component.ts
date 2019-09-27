@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChildren } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { KeysPipe } from '../pipes/keys.pipe';
 import { Setting } from '../models/setting';
+import { CounterDirective } from '../directives/timer.directive';
 
 @Component({
 	selector: 'otp',
@@ -15,6 +16,7 @@ export class OtpInputComponent implements OnInit {
 		timer: 0
 	};
 	@Output() onValueChange = new EventEmitter<any>();
+	@ViewChildren(CounterDirective) CounterDirective;
 	otpForm: FormGroup;
 	inputControls: FormControl[] = new Array(this.setting.length);
 	componentKey = Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
@@ -107,7 +109,6 @@ export class OtpInputComponent implements OnInit {
 		return isMobile || /[a-zA-Z0-9-_]/.test(inp) || (this.setting.allowKeyCodes && this.setting.allowKeyCodes.includes(e.keyCode)) || (e.keyCode >= 96 && e.keyCode <= 105);
 	}
 
-
 	focusTo(eleId) {
 		let ele: any = document.getElementById(eleId);
 		if (ele) {
@@ -131,5 +132,9 @@ export class OtpInputComponent implements OnInit {
 		if(this.counter == 0) {
 			this.onValueChange.emit(-1);
 		}
+	}
+
+	ressendOtp(): void {
+		this.CounterDirective.first.startTimer();
 	}
 }

@@ -124,18 +124,11 @@ In `component` add following:
         <td>Countdown for otp</td>
     </tr>
     <tr>
-        <td>timerClass</td>
+        <td>btnClass</td>
         <td>string</td>
         <td>--</td>
         <th>false</th>
-        <td>Class applied to countdown container.</td>
-    </tr>
-    <tr>
-        <td>timerText</td>
-        <td>string</td>
-        <td>--</td>
-        <th>false</th>
-        <td>Text to be shown with countdown.</td>
+        <td>Class applied to resend otp button</td>
     </tr>
 </table>
 
