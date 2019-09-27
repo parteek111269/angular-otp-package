@@ -44,16 +44,16 @@ In `component` add following:
     <tr>
         <td>setting</td>
         <td>object</td>
-        <td>{length:4}</td>
+        <td>{ length:4, timer: 0, timerText: 'Resend OTP in' }</td>
         <th>true</th>
-        <td>configurationsto configure the component</td>
+        <td>configurations to configure the component</td>
     </tr>
     <tr>
         <td>onValueChange</td>
         <td>function</td>
         <td>--</td>
         <th>true</th>
-        <td>Emitter that will emit otp </td>
+        <td>Emitter that will emit otp and -1 when the timer reaches 0 count</td>
     </tr>
 </table>
 
@@ -115,6 +115,27 @@ In `component` add following:
         <td>--</td>
         <th>false</th>
         <td>By default numbers alphabets and _ - are allowed.Y ou can define other key codes if needed.</td>
+    </tr>
+    <tr>
+        <td>timer</td>
+        <td>number</td>
+        <td>0</td>
+        <th>false</th>
+        <td>Countdown for otp</td>
+    </tr>
+    <tr>
+        <td>timerClass</td>
+        <td>string</td>
+        <td>--</td>
+        <th>false</th>
+        <td>Class applied to countdown container.</td>
+    </tr>
+    <tr>
+        <td>timerText</td>
+        <td>string</td>
+        <td>Resend OTP in</td>
+        <th>false</th>
+        <td>Text to be shown with countdown.</td>
     </tr>
 </table>
 
