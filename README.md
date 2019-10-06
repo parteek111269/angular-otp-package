@@ -53,7 +53,7 @@ In `component` add following:
         <td>function</td>
         <td>--</td>
         <th>true</th>
-        <td>Emitter that will emit otp and -1 when the timer reaches 0 count</td>
+        <td>Emitter that will emit otp, -1 when the timer reaches 0 count and -2 when resend button is clicked</td>
     </tr>
 </table>
 

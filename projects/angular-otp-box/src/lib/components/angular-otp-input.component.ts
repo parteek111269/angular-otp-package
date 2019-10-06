@@ -136,5 +136,6 @@ export class OtpInputComponent implements OnInit {
 
 	ressendOtp(): void {
 		this.CounterDirective.first.startTimer();
+		this.onValueChange.emit(-2);
 	}
 }

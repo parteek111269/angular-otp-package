@@ -9,15 +9,22 @@ export class AppComponent {
   public settings = {
     length: 6,
     numbersOnly: true,
-    timer: 120
+    timer: 12
   }
   
   constructor(){}
 
   public onInputChange(e) {
     console.log(e);
-    // e will emit values entered as otp and,
-    // if e == -1, timer has stopped
-    // work accordingly
+    if(e.length == this.settings.length) {
+      // e will emit values entered as otp and,
+      console.log('otp is', e);
+    }else if(e == -1) {
+      // if e == -1, timer has stopped
+      console.log(e, 'resend button enables');
+    }else if(e == -2) {
+      // e == -2, button click handle
+      console.log('resend otp');
+    }
   }
 }
