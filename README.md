@@ -75,6 +75,13 @@ In `component` add following:
         <td>Number of OTP inputs</td>
     </tr>
     <tr>
+        <td>timer type</td>
+        <td>number</td>
+        <td>0: seconds</td>
+        <th>false</th>
+        <td>Type of the timer 0: seconds, 1: minutes</td>
+    </tr>
+    <tr>
         <td>numbersOnly</td>
         <td>boolean</td>
         <td>--</td>
