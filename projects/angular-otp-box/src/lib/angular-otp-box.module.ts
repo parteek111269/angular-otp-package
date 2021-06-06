@@ -1,9 +1,10 @@
 import { NgModule,  } from '@angular/core';
-import { OtpInputComponent } from './components/angular-otp-input.component';
-import { KeysPipe } from './pipes/keys.pipe';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+import { KeysPipe } from './pipes/keys.pipe';
 import { NumberOnly } from './directives/numberOnly.directive';
+import { OtpInputComponent } from './components/angular-otp-input.component';
 import { CounterDirective } from './directives/timer.directive';
 
 @NgModule({

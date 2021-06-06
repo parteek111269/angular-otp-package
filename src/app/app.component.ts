@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public settings = {
-    length: 6,
+    length: 4,
     numbersOnly: true,
-    timer: 12
+    timer: 120,
+    timerType: 0
   }
   
   constructor(){}

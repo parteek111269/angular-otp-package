@@ -8,4 +8,5 @@ export class Setting {
     wrapperClass?: string;
     timer?: number;
     btnClass?: string;
+    timerType?: number; //  0: secs, 1: mins
 }
