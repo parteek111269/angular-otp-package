@@ -14,7 +14,6 @@ export class OtpInputComponent implements OnInit {
 	@Input() setting: Setting = { 
 		length: 4, 
 		timer: 0,
-		timerType: 0
 	};
 	@Output() onValueChange = new EventEmitter<any>();
 	@ViewChildren(CounterDirective) CounterDirective;
@@ -23,9 +22,12 @@ export class OtpInputComponent implements OnInit {
 	componentKey = Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
 	public counter: number;
 	
-	constructor(private keysPipe: KeysPipe) {}
+	constructor(private keysPipe: KeysPipe) {
+		
+	}
 
 	public ngOnInit(): void {
+		console.log(this.setting);
 		this.otpForm = new FormGroup({})
 		for (let index = 0; index < this.setting.length; index++) {
 			this.otpForm.addControl(this.getControlName(index), new FormControl())
@@ -140,7 +142,7 @@ export class OtpInputComponent implements OnInit {
 		this.onValueChange.emit(-2);
 	}
 
-	formatSecsToMins(time) {   
+	public formatSecsToMins(time) {   
 		// Hours, minutes and seconds
 		var hrs = ~~(time / 3600);
 		var mins = ~~((time % 3600) / 60);

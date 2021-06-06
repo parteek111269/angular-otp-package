@@ -10,7 +10,7 @@ export class AppComponent {
     length: 4,
     numbersOnly: true,
     timer: 120,
-    timerType: 0
+    timerType: 1
   }
   
   constructor(){}
