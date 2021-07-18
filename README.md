@@ -9,7 +9,7 @@ Angular otp input field component for web applications. Easy to integrate and us
 
 ```bash
 npm i angular-otp-box
-``` 
+```
 
 ## Usage
 
@@ -21,7 +21,7 @@ import { AppComponent } from  './app.component';
 
     @NgModule({
     declarations: [AppComponent],
-    imports: [NgOtpInputModule],
+    imports: [AngularOtpLibModule],
     bootstrap: [AppComponent]
     })
 ```
